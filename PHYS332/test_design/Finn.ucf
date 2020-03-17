@@ -1,0 +1,6 @@
+NET "IN_1"		LOC="G18";
+NET "IN_2"		LOC="H18";
+NET "IN_3"		LOC="K18";
+NET "IN_4"		LOC="K17";
+NET "IN_5"		LOC="L14";
+NET "OUT_1"		LOC="J14";

@@ -1,0 +1,56 @@
+////////////////////////////////////////////////////////////////////////////////
+// Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+////////////////////////////////////////////////////////////////////////////////
+//   ____  ____ 
+//  /   /\/   / 
+// /___/  \  /    Vendor: Xilinx 
+// \   \   \/     Version : 14.7
+//  \   \         Application : sch2hdl
+//  /   /         Filename : noah.vf
+// /___/   /\     Timestamp : 09/24/2015 11:40:09
+// \   \  /  \ 
+//  \___\/\___\ 
+//
+//Command: sch2hdl -intstyle ise -family spartan3e -verilog "C:/Users/JHickey14/Desktop/Computer Org/Projects/test_design/noah.vf" -w "C:/Users/JHickey14/Desktop/Computer Org/Projects/test_design/noah.sch"
+//Design Name: noah
+//Device: spartan3e
+//Purpose:
+//    This verilog netlist is translated from an ECS schematic.It can be 
+//    synthesized and simulated, but it should not be modified. 
+//
+`timescale 1ns / 1ps
+
+module noah(IN_1, 
+            IN_2, 
+            IN_3, 
+            IN_4, 
+            IN_5, 
+            OUT_1);
+
+    input IN_1;
+    input IN_2;
+    input IN_3;
+    input IN_4;
+    input IN_5;
+   output OUT_1;
+   
+   wire XLXN_6;
+   wire XLXN_7;
+   wire XLXN_8;
+   wire XLXN_9;
+   
+   AND2  XLXI_2 (.I0(IN_2), 
+                .I1(IN_1), 
+                .O(XLXN_6));
+   XOR2  XLXI_3 (.I0(IN_4), 
+                .I1(IN_3), 
+                .O(XLXN_7));
+   OR2  XLXI_4 (.I0(XLXN_7), 
+               .I1(XLXN_6), 
+               .O(XLXN_8));
+   INV  XLXI_5 (.I(XLXN_8), 
+               .O(XLXN_9));
+   AND2  XLXI_6 (.I0(IN_5), 
+                .I1(XLXN_9), 
+                .O(OUT_1));
+endmodule

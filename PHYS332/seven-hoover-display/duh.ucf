@@ -1,0 +1,26 @@
+//which 7-seg
+NET "pick_a_7seg[0]"	LOC="L14";
+NET "pick_a_7seg[1]"	LOC="L13";
+NET "pick_a_7seg[2]"	LOC="N17";
+NET "pick_a_7seg[3]"	LOC="R17";
+
+//which number
+NET "numbers[0]"	LOC="G18";
+NET "numbers[1]"	LOC="H18";
+NET "numbers[2]"	LOC="K18";
+NET "numbers[3]"	LOC="K17";
+
+//output digit enable
+NET "enable[0]"	LOC="F17";
+NET "enable[1]"	LOC="H17";
+NET "enable[2]"	LOC="C18";
+NET "enable[3]"	LOC="F15";
+
+//output to a segment
+NET "segments[0]"	LOC="L18";
+NET "segments[1]"	LOC="F18";
+NET "segments[2]"	LOC="D17";
+NET "segments[3]"	LOC="D16";
+NET "segments[4]"	LOC="G14";
+NET "segments[5]"	LOC="J17";
+NET "segments[6]"	LOC="H14";

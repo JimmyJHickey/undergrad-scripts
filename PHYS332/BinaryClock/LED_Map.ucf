@@ -1,0 +1,8 @@
+NET "bits[0]" LOC="J14";
+NET "bits[1]" LOC="J15";
+NET "bits[2]" LOC="K15";
+NET "bits[3]" LOC="K14";
+NET "bits[4]" LOC="E17";
+NET "bits[5]" LOC="P15";
+NET "bits[6]" LOC="F4";
+NET "bits[7]" LOC="R4";
