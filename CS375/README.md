@@ -1,5 +1,5 @@
 # CS375: Computer Systems
 
-Taken: Spring 2016
+Taken: Fall 2015
 
 Professor: Gerald Cichanowski
