@@ -1,0 +1,29 @@
+       1                                ;23456789012345678901234567890123
+       2 000000 005001                  START:	CLR	R1		;CLEAR R1 (WILL HOLD ODD NUMBERS)
+       3 000002 005201                  	INC	R1		;SET R1 TO 1
+       4 000004 005003                  	CLR	R3		;CLEAR TEMP OUTPUT
+       5 000006 005004                  	CLR	R4		;CLEAR R4 (FUTURE COUNTER)
+       6 000010 060103                  LOOP:	ADD	R1,R3		;ADD ODD NUMBER TO OUTPUT
+       7 000012 102407                  	BVS	OVER		;CHECK FOR OVERFLOW
+       8 000014 005201                  	INC	R1		;ADD 1 TO ODD
+       9 000016 005201                  	INC	R1		;ADD 1 TO ODD (TOTAL INC OF 2)
+      10 000020 005204                  	INC	R4		;ADD 1 TO COUNTER
+      11 000022 026704  000016          	CMP	N,R4		;CHECK IF COUNTER IS INPUT
+      12 000026 001403                  	BEQ	FIN		;END IF THE INPUT HAS BEEN REACHED
+      13 000030 000767                  	BR	LOOP		;ELSE CONTINUE LOOP
+      14 000032 016703  000012          OVER:	MOV	MIN,R3		;MOVE MIN INT TO OUTPUT
+      15 000036 010367  000004          FIN:	MOV	R3,NSQ		;MOVE TEMP OUTPUT TO OUTPUT
+      16 000042 000000                  DONE:	HALT
+      17 000044                         N:	.BLKW	1		;INPUT
+      18 000046                         NSQ:	.BLKW	1		;INPUT SQUARED
+      18 000050 177777                  MIN:	.WORD	177777		;-32768
+
+Symbol Table:
+DONE	  000042 
+FIN	  000036 
+LOOP	  000010 
+MIN	  000050 
+N	  000044 
+NSQ	  000046 
+OVER	  000032 
+START	  000000 

@@ -1,0 +1,57 @@
+       1                                ;23456789012345678901234567890123
+       2 000000 005067  000140          START:	CLR	PRCNT		;SET PRCNT TO 0
+       3 000004 012767  000002  000126  	MOV	#2,COUNT	;SET COUNT TO 2
+       4 000012 012767  000001  000122  	MOV	#1,NUM		;SET NUM TO 1
+       5 000020 026727  000122  000001  	CMP	N,#1		;CHECK IF N>0
+       6 000026 100434                  	BMI	ERROR		;BRANCH IF N<1
+       7 000030 000402                  	BR	LOOP1		;GO TO LOOPS
+       8                                
+       9 000032 005267  000106          INCR:	INC	PRCNT		;INCREMENT PRIME COUNTER	
+      10                                LOOP1:	
+      11                                		
+      12 000036 026767  000104  000100  	CMP 	N,PRCNT		;CHECK IF YOU HAVE N PRIMES
+      13 000044 001431                  	BEQ	FIN		;END IF YOU DO
+      14 000046 005267  000070          	INC	NUM		;INCREASE NUM BEING CHECKED
+      15 000052 012767  000002  000060  	MOV	#2,COUNT	;START COUNT FOR LOOP2 AT 2
+      16                                LOOP2:	
+      17 000060 026767  000054  000054  	CMP	COUNT,NUM	;CHECK IF NUM=COUNT
+      18                                				;THIS WOULD MEAN THAT IT IS
+      19                                				;ONLY DIVISIBLE BY ITSELF
+      20                                				;AND ONE
+      21 000066 001761                  	BEQ 	INCR		;GO TO INCR IF COUNT=NUM
+      22 000070 016700  000046          	MOV 	NUM,R0		;MAKE NUM DOUBLE
+      23 000074 010001                  	MOV	R0,R1		;PRECISION
+      24 000076 006700                  	SXT	R0		;SO REMAINDER CAN BE CHECKED
+      25 000100 071067  000034          	DIV	COUNT,R0	;NUM/COUNT
+      26 000104 005701                  	TST	R1		;CHECK REMAINDER
+      27 000106 001753                  	BEQ	LOOP1		;IF REMAINDER IS 0, BRANCH
+      28 000110 005267  000024          	INC	COUNT		;INCREMENT DIVISOR
+      29 000114 102401                  	BVS	ERROR		;CHECK FOR OVERFLOW
+      30 000116 000760                  	BR	LOOP2		;LOOP AGAIN
+      31                                
+      32                                
+      33 000120 012767  100000  000022  ERROR:	MOV	#100000,PRIME	;OUTPUT ERROR
+      34 000126 000403                  	BR	DONE		;BRANCH TO DONE
+      35 000130 016767  000006  000012  FIN:	MOV	NUM,PRIME	;PUT HIGHEST PRIME IN PRIME
+      36 000136 000000                  DONE:	HALT			
+      37                                
+      38 000140                         COUNT:	.BLKW	1		;COUNTER FOR LOOP 2
+      39 000142                         NUM:	.BLKW	1		;NUMBER BEING CHECKED
+      40 000144                         PRCNT:	.BLKW	1		;PRIME COUNTER
+      41 000146                         N:	.BLKW	1		;Input 2s comp >0
+      42 000150                         PRIME:	.BLKW	1		;Output 2s comp>0
+      42                                				;-32768 for error,
+
+Symbol Table:
+COUNT	  000140 
+DONE	  000136 
+ERROR	  000120 
+FIN	  000130 
+INCR	  000032 
+LOOP1	  000036 
+LOOP2	  000060 
+N	  000146 
+NUM	  000142 
+PRCNT	  000144 
+PRIME	  000150 
+START	  000000 
