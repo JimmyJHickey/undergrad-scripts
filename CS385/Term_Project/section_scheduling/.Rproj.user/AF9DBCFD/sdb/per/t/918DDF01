@@ -1,0 +1,21 @@
+{
+    "collab_server" : "",
+    "contents" : "section_info <- read.csv(file = \"section_schedule_data2.csv\",header = TRUE, sep = \",\", colClasses = \"factor\")\n\n\nsection_schedule = data.frame(section_id = numeric(3), day_of_the_week=character(1), start_time=character(3), end_time=character(3),stringsAsFactors=FALSE)\n\n\nfor(i in 1:nrow(section_info)){\n  num_of_days <- section_info[i,8]\n  string <- section_info[i,7]\n  \n    for(j in 1:num_of_days){\n      sub <- substr(string, j,j)\n      id <- section_info[i,1]\n      start <- section_info[i,5]\n      end <- section_info[i,6]\n      \n      newrow <- list(id,sub,start,end)\n      section_schedule=rbind(section_schedule,newrow)\n    }\n  \n  \n}\n\nsection_schedule <- section_schedule[-c(1,2,3),]\nwrite.csv(section_schedule, file=\"section_schedule_data.csv\",row.names = FALSE, quote = FALSE)\n",
+    "created" : 1462050417098.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "177892309",
+    "id" : "918DDF01",
+    "lastKnownWriteTime" : 1462145822,
+    "last_content_update" : 1462145822504,
+    "path" : "~/Classes/Applied_Database_Management_Systems/Term_Project/section_scheduling/cleaning_section_data.R",
+    "project_path" : "cleaning_section_data.R",
+    "properties" : {
+        "tempName" : "Untitled1"
+    },
+    "relative_order" : 1,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}

@@ -1,0 +1,39 @@
+\documentclass[12pt,letterpaper]{article}
+\usepackage{enumerate}
+
+\begin{document}
+
+\noindent Jimmy Hickey\\
+CS 385: Applied Database Management Systems\\
+29-3-16
+
+\section*{}
+1. Find the names of students who have taken Biology classes in both 2009 and 2010.\\\\
+\{t $\mid \exists s \in student\ (t[name]=s[name] 
+\wedge \exists u \in takes
+(u[ID] = s [ID]
+\wedge \exists u \in takes(
+u[ID] = s[ID] \wedge u[year] = 2009
+\wedge \exists v \in course
+ (v[course\_ID] = u[course\_ID] \wedge v[dept\_name] = ``Biology")))
+\wedge \exists w \in takes
+ (w[ID] = s [ID] \wedge w[year] = 2010
+\wedge \exists x \in course
+(w[course\_ID] = x[course\_ID] \wedge x[dept\_name] = ``Biology")
+))$ \}
+\\\\
+
+\noindent2. Find ID's of instructors whose salaries are less than some other instructors.\\\\
+\{t$ \mid \exists s \in instructor (
+s[ID] = t[ID] 
+\wedge \\
+\exists u \in instructor
+(s[salary] < u[salary]))$ \}
+\\\\
+
+\noindent3. Find all departments with the maximum budget.\\\\
+\{t $ \mid \forall s \in department(
+t[salary]\geq s[salary])$\}
+
+
+\end{document}

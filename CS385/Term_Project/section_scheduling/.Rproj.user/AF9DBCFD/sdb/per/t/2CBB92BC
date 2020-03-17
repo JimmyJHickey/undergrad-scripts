@@ -1,0 +1,28 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1462065303578.000,
+    "dirty" : false,
+    "encoding" : "",
+    "folds" : "",
+    "hash" : "0",
+    "id" : "2CBB92BC",
+    "lastKnownWriteTime" : 7308604914264011873,
+    "last_content_update" : 1462065303578,
+    "path" : null,
+    "project_path" : null,
+    "properties" : {
+        "cacheKey" : "w5xw7stza5",
+        "caption" : "section_schedule",
+        "contentUrl" : "grid_resource/gridviewer.html?env=&obj=section_schedule&cache_key=w5xw7stza5",
+        "displayedObservations" : "0",
+        "environment" : "",
+        "object" : "section_schedule",
+        "totalObservations" : "0",
+        "variables" : "4"
+    },
+    "relative_order" : 3,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_dataframe"
+}

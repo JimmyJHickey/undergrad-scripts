@@ -1,0 +1,5 @@
+Exercises 7.20 (a), (b) & (c)
+
+Note: you need create the E-R diagram on MySQL workbench, 
+type in entity sets reduced from the E-R diagram, modify the diagram for problems (b) & (c), 
+take a snapshot of E-R digram and include it in your answer.

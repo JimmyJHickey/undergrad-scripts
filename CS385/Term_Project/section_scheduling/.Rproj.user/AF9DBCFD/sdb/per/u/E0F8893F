@@ -1,0 +1,21 @@
+{
+    "collab_server" : "",
+    "contents" : "example <-c(example,2)\nexample\n\ndays <- c(\"M\", \"T\", \"W\", \"H\", \"F\")\n\n  s_time = sample(16:32,1)\n  if(s_time%%2 == 0){\n    mins <- \":00\"\n   } else {\n    mins <- \":30\"\n   }\n  if(s_time >= 24){\n    ap <- \"pm\"\n  } else{\n    ap <- \"am\"\n  }\n  begin <-s_time + 2\n  s_time <- s_time%/%2\n  s_time <- s_time%%12\n  if(s_time == 0){\n    s_time <- 12\n  }\n  \n  s_time <- paste(s_time, mins, ap, sep = \"\")\n  \n  end_time <- sample( begin : 34,1)\n  if(end_time%%2 == 0){\n    mins <- \":00\"\n  } else {\n    mins <- \":30\"\n  }\n  if(end_time >= 24){\n    ap <- \"pm\"\n  } else{\n    ap <- \"am\"\n  }\n  end_time <- end_time%/%2\n  end_time <- end_time%%12\n  if(end_time == 0){\n    end_time <- 12\n  }\n  end_time <- paste(end_time, mins, ap, sep = \"\")\n  \n  \n  \n  \n  \n  \n  \n  \nstar_id <- \"ef5678gh\"\nday <- \"M\"\nfor (i 1:nrow(section_info)){\n \n}",
+    "created" : 1462128117324.000,
+    "dirty" : true,
+    "encoding" : "",
+    "folds" : "",
+    "hash" : "3587040594",
+    "id" : "E0F8893F",
+    "lastKnownWriteTime" : 27303364806049904,
+    "last_content_update" : 1462132280639,
+    "path" : null,
+    "project_path" : null,
+    "properties" : {
+        "tempName" : "Untitled1"
+    },
+    "relative_order" : 4,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}

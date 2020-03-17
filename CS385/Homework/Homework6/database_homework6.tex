@@ -1,0 +1,66 @@
+\documentclass[]{article}
+
+\begin{document}
+\noindent Jimmy Hickey\\
+CS 385: Applied Database Management Systems\\
+22-4-16
+
+\section*{} 
+a. Compute B\textsuperscript{+}.\\
+$ 
+B\textsuperscript{+} = (B)\\
+B\rightarrow D \indent \indent B\textsuperscript{+}=(B,D)\\
+D\rightarrow A \indent \indent B\textsuperscript{+}=(A,B,D)\\
+A\rightarrow BCD \indent B\textsuperscript{+}=(A,B,C,D)\\
+BC\rightarrow DE \indent B\textsuperscript{+}=(A,B,C,D,E)\\
+$
+\\
+b. Prove (using Armstrong’s axioms) that AF is a superkey.\\
+$
+(AF)\textsuperscript{+}\rightarrow(A) 
+\indent\indent(AF)\textsuperscript{+}=(A)
+\indent\indent\indent\indent\indent(Reflexitivity)\\
+%
+(AF)\textsuperscript{+}\rightarrow(F)
+\indent\indent(AF)\textsuperscript{+}=(A,F)
+\indent\indent\indent\indent(Reflexitivity)\\
+%
+A\rightarrow BCD
+\indent\indent\indent(AF)\textsuperscript{+}=(A,B,C,D,F)
+\indent(FD1)\\
+%
+A\rightarrow BC\rightarrow DE
+\indent(AF)\textsuperscript{+}=(A,B,C,D,E,F)
+\indent(Transitivity)\\
+$\dfrac{num}{den}
+%
+R$\subseteq(AF)$\textsuperscript{+}, AF is a superkey.
+\\\\
+c. Compute a canonical cover for the above set of functional dependencies
+F; give each step of your derivation with an explanation.\\
+%
+Using the union rule $B\rightarrow D$ is extraneous.\\
+F'=\{$A\rightarrow BCD, BC\rightarrow DE, D \rightarrow A$\}\\
+%
+C is extraneous in $BC\rightarrow DE$.\\
+$(B)\textsuperscript{+}=(A,B,C,D,E)$\\
+F''=\{$A\rightarrow BCD, B\rightarrow DE, D \rightarrow A$\}\\
+%
+D is extraneous in $A\rightarrow BCD$.\\
+$(A)\textsuperscript{+}=(A,B,C,D,E)$\\
+F'''= $F_c$=\{$A\rightarrow BC, B\rightarrow DE, D \rightarrow A$\}
+\\\\
+d.\indent Give a 3NF decomposition of \textit{r} based on the canonical cover.\\
+\{(A,B,C), (B,D,E), (D,A), (A,F)\}
+\\\\
+e.\indent Give a BCNF decomposition of \textit{r} using the original set of functional dependencies.\\
+\{(A,B,C,D), (A,E,F)\} $\Rightarrow$ \{(BD), (ABC), (AEF)\}
+\\\\
+f.\indent Can you get the same BCNF decomposition of \textit{r} as above, using the canonical cover?\\
+No you cannot.
+
+
+
+
+\end{document}
+

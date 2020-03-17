@@ -1,0 +1,7 @@
+Write queries in Tuple Relational Calculus to answer the following questions:
+
+1) Find the names of students who have taken Biology classes in both 2009 and 2010.
+
+2) Find ID's of instructors whose salaries are less than some other instructors
+
+3) Find all departments with the maximum budget

@@ -1,0 +1,27 @@
+Section_ID,Lname,Fname,Instructor_StarID,Start_time,End_time,Days,Number of Days
+001146,Schumacher,Paul,ab1234cd,11:00am,11:50am,MWF,3
+001147,Zhang,Mingrui,ef5678gh,9:30am,10:50am,TH,2
+001151,Schumacher,Paul,ab1234cd,12:00pm,12:50pm,MWF,3
+001600,Zhang,Mingrui,ef5678gh,2:00pm,3:20pm,TH,2
+000987,Francioni,Joan,ij9012kl,11:00am,12:20pm,TH,2
+000422,Francioni,Joan,ij9012kl,2:00pm,3:20pm,TH,2
+000255,Staff,,N/A,9:00am,10:50am,MW,2
+000254,Schumacher,Paul,ab1234cd,9:30am,11:20am,TH,2
+001205,Schumacher,Paul,ab1234cd,11:30am,1:20pm,TH,2
+002145,Staff,,N/A,2:00pm,3:50pm,MW,2
+000253,Iyengar,Sudharsan,mn3456op,8:00am,9:50am,MW,2
+001349,Iyengar,Sudharsan,mn3456op,10:00am,11:50am,MW,2
+000430,Gegg-Harrison,Timothy,qr7890st,9:00am,10:50am,TH,2
+001439,Gegg-Harrison,Timothy,qr7890st,1:30pm,3:20pm,TH,2
+000471,Cichanowski,Gerald,uv1234wx,7:50am,9:20am,TH,2
+000179,Debnath,Narayan,yz5678ab,3:30pm,5:20pm,TH,2
+000769,Francioni,Joan,ij9012kl,2:00pm,3:20pm,MWF,3
+002293,Francioni,Joan,ij9012kl,12:00pm,12:50pm,MWF,3
+002292,Gegg-Harrison,Timothy,qr7890st,4:00pm,6:40pm,W,1
+001348,Cichanowski,Gerald,uv1234wx,11:00am,12:50pm,TH,2
+002154,Zhang,Mingrui,ef5678gh,9:00am,10:20am,MW,2
+000180,Staff,,N/A,11:00am,12:20pm,TH,2
+000443,Debnath,Narayan,yz5678ab,12:30pm,1:50pm,TH,2
+001148,Gegg-Harrison,Timothy,qr7890st,3:30pm,4:50pm,TH,2
+001347,Iyengar,Sudharsan,mn3456op,8:00am,9:20am,TH,2
+000770,Zhang,Mingrui,ef5678gh,11:00am,12:50pm,MW,2

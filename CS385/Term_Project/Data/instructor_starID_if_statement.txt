@@ -1,0 +1,24 @@
+=IF(D2 = "Schumacher, Paul", "ab1234cd", 
+IF(D2 = "Zhang, Mingrui", "ef5678gh", 
+IF(D2 = "Francioni, Joan", "ij9012kl",
+IF(D2 = "Iyengar, Sudharsan", "mn3456op",
+IF(D2 = "Gegg-Harrison, Timothy", "qr7890st",
+IF(D2 = " Cichanowski, Gerald", "uv1234wx",
+IF(D2 = "Debnath, Narayan", "yz5678ab", "Not in list"))))))
+
+
+=IF(D2="Schumacher, Paul","ab1234cd",
+IF(D2="Zhang, Mingrui","ef5678gh",
+IF(D2="Francioni, Joan","ij9012kl",
+IF(D2="Iyengar, Sudharsan","mn3456op",
+IF(D2="Gegg-Harrison, Timothy","qr7890st",
+IF(D2="Cichanowski, Gerald","uv1234wx",
+IF(D2="Debnath, Narayan","yz5678ab",
+IF(D2="Ahmed, Emdad", "cd1111ef",
+IF(D2="Anderson, Nicole", "gh2222jk",
+IF(D2="Lin, Chi-Cheng", "lm3333no", "Not in List"))))))))
+
+
+Schumacher, Paul
+
+Schumacher, Paul

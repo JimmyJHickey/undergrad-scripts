@@ -1,0 +1,49 @@
+\documentclass[12pt,letterpaper]{article}
+\usepackage{enumerate}
+
+\begin{document}
+
+\noindent Jimmy Hickey\\
+CS 385: Applied Database Management Systems\\
+6-2-16
+
+\section*{2.8}
+ \begin{enumerate}[(a)]
+ 	\item $\pi_{branch\_name}(\sigma_{branch\_city=Chicago}(branch))$
+ 	
+ 	\item$\pi_{custome\_name}(\sigma_{branch\_name=Downtown}(borrower\bowtie loan))$
+ 
+ \end{enumerate}
+
+\section*{2.9}
+ \begin{enumerate}[(a)]
+ 	\item branch: branch\_name\\
+	 	  customer: customer\_name (this is not a very good primary key)\\
+	 	  loan: loan\_number\\
+	 	  borrower: loan\_number\\
+	 	  account: account\_number\\
+	 	  depositor: account\_number
+ 	
+ 	\item branch\_name shows up in loan, customer\_name shows up in borrower and depositor,loan\_number shows up in borrower, and account\_number shows up in both account and depositor.
+ \end{enumerate}
+ 
+\section*{2.12}
+ \begin{enumerate}[(a)]
+ 	\item $\pi_{person\_name}(\sigma_{company\_name=First\ Bank\ Corporation}(works))$
+ 	
+ 	\item$\pi_{person\_name,\ city}(\sigma_{company\_name=First\ Bank\ Corporation}(works \bowtie employee))$
+ 	
+ 	\item$\pi_{person\_name,\ city,\ street}(\sigma_{company\_name=First\ Bank\ Corporation\ and\ salary > 10,000}(works \bowtie employee))$
+ 	
+ \end{enumerate}
+\clearpage 
+\section*{2.13}
+ \begin{enumerate}[(a)]
+ 	\item $\pi_{loan\_number}(\sigma_{amount>10,000}(loan))$
+ 	
+ 	\item $\pi_{customer\_name}(\sigma_{balance>6,000}(depositor \bowtie account))$
+ 	
+ 	\item $\pi_{customer\_name}(\sigma_{balance>6,000 \ and \ branch\_name=Uptown}(depositor \bowtie account))$
+ \end{enumerate}
+
+\end{document}
